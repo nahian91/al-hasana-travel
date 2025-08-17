@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package alhasana-travel
+ * @package alhasanatheme
  */
 
 /**
@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function alhasana_travel_jetpack_setup() {
+function alhasanatheme_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'alhasana_travel_infinite_scroll_render',
+			'render'    => 'alhasanatheme_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -33,7 +33,7 @@ function alhasana_travel_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'alhasana-travel-style',
+				'stylesheet' => 'alhasanatheme-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,13 +48,13 @@ function alhasana_travel_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'alhasana_travel_jetpack_setup' );
+add_action( 'after_setup_theme', 'alhasanatheme_jetpack_setup' );
 
-if ( ! function_exists( 'alhasana_travel_infinite_scroll_render' ) ) :
+if ( ! function_exists( 'alhasanatheme_infinite_scroll_render' ) ) :
 	/**
 	 * Custom render function for Infinite Scroll.
 	 */
-	function alhasana_travel_infinite_scroll_render() {
+	function alhasanatheme_infinite_scroll_render() {
 		while ( have_posts() ) {
 			the_post();
 			if ( is_search() ) :

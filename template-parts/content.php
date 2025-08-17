@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package alhasana-travel
+ * @package alhasanatheme
  */
 
 ?>
@@ -22,14 +22,14 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				alhasana_travel_posted_on();
-				alhasana_travel_posted_by();
+				alhasanatheme_posted_on();
+				alhasanatheme_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php alhasana_travel_post_thumbnail(); ?>
+	<?php alhasanatheme_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -37,7 +37,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'alhasana-travel' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'alhasanatheme' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -50,7 +50,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'alhasana-travel' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'alhasanatheme' ),
 				'after'  => '</div>',
 			)
 		);
@@ -58,6 +58,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php alhasana_travel_entry_footer(); ?>
+		<?php alhasanatheme_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
