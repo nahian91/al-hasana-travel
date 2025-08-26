@@ -50,6 +50,9 @@ function alhasanatheme_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'alhasanatheme' ),
+			'footer-1' => esc_html__( 'Footer 1', 'alhasanatheme' ),
+			'footer-2' => esc_html__( 'Footer 2', 'alhasanatheme' ),
+			'footer-3' => esc_html__( 'Footer 3', 'alhasanatheme' ),
 		)
 	);
 
@@ -146,20 +149,20 @@ function alhasanatheme_scripts() {
 	wp_enqueue_style('alhasanatheme-meanmenu',get_template_directory_uri() . '/assets/css/meanmenu.css', array(), _S_VERSION);
 	wp_enqueue_style('alhasanatheme-datepickerboot',get_template_directory_uri() . '/assets/css/datepickerboot.css', array(), _S_VERSION);
 	wp_enqueue_style('alhasanatheme-nice-select',get_template_directory_uri() . '/assets/css/nice-select.css', array(), _S_VERSION);
-	wp_enqueue_style('alhasanatheme-color',get_template_directory_uri() . '/assets/css/color.css', array(), _S_VERSION);
+	wp_enqueue_style('alhasanatheme-swiper-bundle',get_template_directory_uri() . '/assets/css/swiper-bundle.min.css', array(), _S_VERSION);
 	wp_enqueue_style('alhasanatheme-main',get_template_directory_uri() . '/assets/css/main.css', array(), _S_VERSION);
 
-	wp_enqueue_script( 'alhasanatheme-viewport', get_template_directory_uri() . 'assets/js/viewport.jquery.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'alhasanatheme-bootstrap', get_template_directory_uri() . 'assets/js/bootstrap.bundle.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'alhasanatheme-nice-select', get_template_directory_uri() . 'assets/js/jquery.nice-select.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'alhasanatheme-waypoints', get_template_directory_uri() . 'assets/js/jquery.waypoints.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'alhasanatheme-counterup', get_template_directory_uri() . 'assets/js/jquery.counterup.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'alhasanatheme-swiper-bundle', get_template_directory_uri() . 'assets/js/swiper-bundle.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'alhasanatheme-meanmenu', get_template_directory_uri() . 'assets/js/jquery.meanmenu.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'alhasanatheme-bootstrap-datepicker', get_template_directory_uri() . 'assets/js/bootstrap-datepicker.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'alhasanatheme-magnific-popup', get_template_directory_uri() . 'assets/js/jquery.magnific-popup.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'alhasanatheme-wow', get_template_directory_uri() . 'assets/js/wow.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'alhasanatheme-main', get_template_directory_uri() . 'assets/js/main.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'alhasanatheme-viewport', get_template_directory_uri() . '/assets/js/viewport.jquery.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'alhasanatheme-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'alhasanatheme-nice-select', get_template_directory_uri() . '/assets/js/jquery.nice-select.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'alhasanatheme-waypoints', get_template_directory_uri() . '/assets/js/jquery.waypoints.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'alhasanatheme-counterup', get_template_directory_uri() . '/assets/js/jquery.counterup.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'alhasanatheme-swiper-bundle', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'alhasanatheme-meanmenu', get_template_directory_uri() . '/assets/js/jquery.meanmenu.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'alhasanatheme-bootstrap-datepicker', get_template_directory_uri() . '/assets/js/bootstrap-datepicker.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'alhasanatheme-magnific-popup', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'alhasanatheme-wow', get_template_directory_uri() . '/assets/js/wow.min.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'alhasanatheme-main', get_template_directory_uri() . '/assets/js/main.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -194,3 +197,128 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Register CPTs: Tour & Visa Services
+ */
+function alhasana_register_cpts() {
+
+    /**
+     * ===== TOUR CPT =====
+     */
+    $tour_labels = array(
+        'name'               => __( 'Tours', 'alhasanatheme' ),
+        'singular_name'      => __( 'Tour', 'alhasanatheme' ),
+        'menu_name'          => __( 'Tours', 'alhasanatheme' ),
+        'add_new'            => __( 'Add New Tour', 'alhasanatheme' ),
+        'add_new_item'       => __( 'Add New Tour', 'alhasanatheme' ),
+        'edit_item'          => __( 'Edit Tour', 'alhasanatheme' ),
+        'new_item'           => __( 'New Tour', 'alhasanatheme' ),
+        'all_items'          => __( 'All Tours', 'alhasanatheme' ),
+        'view_item'          => __( 'View Tour', 'alhasanatheme' ),
+        'search_items'       => __( 'Search Tours', 'alhasanatheme' ),
+        'not_found'          => __( 'No Tours found', 'alhasanatheme' ),
+        'not_found_in_trash' => __( 'No Tours found in Trash', 'alhasanatheme' ),
+    );
+
+    $tour_args = array(
+        'labels'             => $tour_labels,
+        'public'             => true,
+        'menu_icon'          => 'dashicons-palmtree',
+        'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
+        'has_archive'        => true,
+        'rewrite'            => array( 'slug' => 'tours' ),
+        'show_in_rest'       => true,
+    );
+    register_post_type( 'tour', $tour_args );
+
+
+    /**
+     * ===== VISA SERVICES CPT =====
+     */
+    $visa_labels = array(
+        'name'               => __( 'Visa Services', 'alhasanatheme' ),
+        'singular_name'      => __( 'Visa Service', 'alhasanatheme' ),
+        'menu_name'          => __( 'Visa Services', 'alhasanatheme' ),
+        'add_new'            => __( 'Add New Visa', 'alhasanatheme' ),
+        'add_new_item'       => __( 'Add New Visa Service', 'alhasanatheme' ),
+        'edit_item'          => __( 'Edit Visa Service', 'alhasanatheme' ),
+        'new_item'           => __( 'New Visa Service', 'alhasanatheme' ),
+        'all_items'          => __( 'All Visa Services', 'alhasanatheme' ),
+        'view_item'          => __( 'View Visa Service', 'alhasanatheme' ),
+        'search_items'       => __( 'Search Visa Services', 'alhasanatheme' ),
+        'not_found'          => __( 'No Visa Services found', 'alhasanatheme' ),
+        'not_found_in_trash' => __( 'No Visa Services found in Trash', 'alhasanatheme' ),
+    );
+
+    $visa_args = array(
+        'labels'             => $visa_labels,
+        'public'             => true,
+        'menu_icon'          => 'dashicons-id',
+        'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
+        'has_archive'        => true,
+        'rewrite'            => array( 'slug' => 'visas-service' ),
+        'show_in_rest'       => true,
+    );
+    register_post_type( 'visa-service', $visa_args );
+
+
+    /**
+     * ===== TOUR CATEGORY TAXONOMY =====
+     */
+    $tour_cat_labels = array(
+        'name'              => __( 'Tour Categories', 'alhasanatheme' ),
+        'singular_name'     => __( 'Tour Category', 'alhasanatheme' ),
+        'search_items'      => __( 'Search Tour Categories', 'alhasanatheme' ),
+        'all_items'         => __( 'All Tour Categories', 'alhasanatheme' ),
+        'edit_item'         => __( 'Edit Tour Category', 'alhasanatheme' ),
+        'update_item'       => __( 'Update Tour Category', 'alhasanatheme' ),
+        'add_new_item'      => __( 'Add New Tour Category', 'alhasanatheme' ),
+        'new_item_name'     => __( 'New Tour Category', 'alhasanatheme' ),
+        'menu_name'         => __( 'Tour Categories', 'alhasanatheme' ),
+    );
+    register_taxonomy( 'tour_category', array( 'tour' ), array(
+        'hierarchical'      => true,
+        'labels'            => $tour_cat_labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'rewrite'           => array( 'slug' => 'tour-category' ),
+        'show_in_rest'      => true,
+    ) );
+
+
+    /**
+     * ===== VISA CATEGORY TAXONOMY =====
+     */
+    $visa_cat_labels = array(
+        'name'              => __( 'Visa Categories', 'alhasanatheme' ),
+        'singular_name'     => __( 'Visa Category', 'alhasanatheme' ),
+        'search_items'      => __( 'Search Visa Categories', 'alhasanatheme' ),
+        'all_items'         => __( 'All Visa Categories', 'alhasanatheme' ),
+        'edit_item'         => __( 'Edit Visa Category', 'alhasanatheme' ),
+        'update_item'       => __( 'Update Visa Category', 'alhasanatheme' ),
+        'add_new_item'      => __( 'Add New Visa Category', 'alhasanatheme' ),
+        'new_item_name'     => __( 'New Visa Category', 'alhasanatheme' ),
+        'menu_name'         => __( 'Visa Categories', 'alhasanatheme' ),
+    );
+    register_taxonomy( 'visa-category', array( 'visa-service' ), array(
+        'hierarchical'      => true,
+        'labels'            => $visa_cat_labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'rewrite'           => array( 'slug' => 'visa-category' ),
+        'show_in_rest'      => true,
+    ) );
+
+}
+add_action( 'init', 'alhasana_register_cpts' );
+
+// Save ACF JSON
+add_filter('acf/settings/save_json', function( $path ) {
+    return get_stylesheet_directory() . '/acf-json';
+});
+
+// Load ACF JSON
+add_filter('acf/settings/load_json', function( $paths ) {
+    $paths[] = get_stylesheet_directory() . '/acf-json';
+    return $paths;
+});

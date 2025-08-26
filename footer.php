@@ -20,18 +20,13 @@
                         <div class="single-widget-items text-center">
                             <div class="widget-head">
                                 <a href="index.php">
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/img/logo/white-log.svg" alt="img">
+                                    <img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png" alt="img">
                                 </a>
                             </div>
                             <div class="footer-content">
-                                <h3>Subscribe Newsletter</h3>
+                                <h3>About Us</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto exercitationem quo quas itaque corrupti quae voluptate earum quidem laudantium illum.</p>
                                 <p>Get Our Latest Deals and Update</p>
-                                <div class="footer-input">
-                                    <input type="email" id="email2" placeholder="Your email address">
-                                    <button class="newsletter-btn theme-btn" type="submit">
-                                        Subscribe <i class="fa-sharp fa-regular fa-arrow-right"></i>
-                                    </button>
-                                </div>
                                 <div class="social-icon d-flex align-items-center justify-content-center">
                                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -46,33 +41,15 @@
                             <div class="widget-head">
                                 <h4>Quick Links</h4>
                             </div>
-                            <ul class="list-items">
-                                <li>
-                                    <a href="index.php">
-                                        Home
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="index.php">
-                                        About Us
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="news.php">
-                                        Blog
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="tour-details.php">
-                                        Services
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="tour-details.php">
-                                        Tour
-                                    </a>
-                                </li>
-                            </ul>
+                           <?php
+wp_nav_menu( array(
+    'theme_location' => 'footer-1',     // registered location
+    'menu_class'     => 'list-items',  // class for <ul>
+    'container'      => false,          // remove <div>
+    'fallback_cb'    => false           // no fallback <page list>
+) );
+?>
+
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 ps-lg-5 wow fadeInUp wow" data-wow-delay=".6s">
@@ -80,33 +57,14 @@
                             <div class="widget-head">
                                 <h4>Services</h4>
                             </div>
-                            <ul class="list-items">
-                                <li>
-                                    <a href="tour-details.php">
-                                        Wanderlust Adventures
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="tour-details.php">
-                                        Globe Trotters Travel
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="tour-details.php">
-                                        Odyssey Travel Services
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="tour-details.php">
-                                        Jet Set Journeys
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="tour-details.php">
-                                        Dream Destinations Travel
-                                    </a>
-                                </li>
-                            </ul>
+                            <?php
+wp_nav_menu( array(
+    'theme_location' => 'footer-2',     // registered location
+    'menu_class'     => 'list-items',  // class for <ul>
+    'container'      => false,          // remove <div>
+    'fallback_cb'    => false           // no fallback <page list>
+) );
+?>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 ps-xl-5 wow fadeInUp wow" data-wow-delay=".6s">
@@ -153,13 +111,17 @@
             </div>
             <div class="footer-bottom">
                 <div class="footer-wrapper">
-                    <p class="wow fadeInUp" data-wow-delay=".3s">
-                        Copyright © <span>Turmet,</span> All Rights Reserved.
+                    <p class="wow fadeInUp" data-wow-delay=".5s">
+                        Developed by <a href="https://infinityflamesoft.com/" target="_blank" rel="noopener">Infinity Flame Soft</a>.
                     </p>
-                    <ul class="bottom-list wow fadeInUp" data-wow-delay=".5s">
-                        <li>Terms of use</li>
-                        <li>Privacy Environmental Policy</li>
-                    </ul>
+                                                <?php
+wp_nav_menu( array(
+    'theme_location' => 'footer-3',     // registered location
+    'menu_class'     => 'bottom-list',  // class for <ul>
+    'container'      => false,          // remove <div>
+    'fallback_cb'    => false           // no fallback <page list>
+) );
+?>
                 </div>
             </div>
         </div>
