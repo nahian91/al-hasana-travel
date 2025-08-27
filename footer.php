@@ -8,124 +8,162 @@
  *
  * @package alhasanatheme
  */
-
 ?>
 
 <!-- Footer Section Start -->
-    <footer class="footer-section fix bg-cover" style="background-image: url(<?php echo get_template_directory_uri();?>/assets/img/footer/footer-bg.jpg);">
-        <div class="container">
-            <div class="footer-widget-wrapper-new">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-5 col-md-8 col-sm-6 wow fadeInUp wow" data-wow-delay=".2s">
-                        <div class="single-widget-items text-center">
-                            <div class="widget-head">
-                                <a href="index.php">
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png" alt="img">
-                                </a>
-                            </div>
-                            <div class="footer-content">
-                                <h3>About Us</h3>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto exercitationem quo quas itaque corrupti quae voluptate earum quidem laudantium illum.</p>
-                                <p>Get Our Latest Deals and Update</p>
-                                <div class="social-icon d-flex align-items-center justify-content-center">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
+<footer class="footer-section fix bg-cover" style="background-image: url(<?php echo get_template_directory_uri();?>/assets/img/footer/footer-bg.jpg);">
+    <div class="container">
+        <div class="footer-widget-wrapper-new">
+            <div class="row">
+                <div class="col-xl-4 col-lg-5 col-md-8 col-sm-6 wow fadeInUp wow" data-wow-delay=".2s">
+                    <div class="single-widget-items text-center">
+                        <div class="widget-head">
+                            <a href="index.php">
+                                <img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png" alt="img">
+                            </a>
+                        </div>
+                        <div class="footer-content">
+                            <?php 
+                                $footer_about = get_field('footer_about', 'option');
+
+                                if( $footer_about ) {
+                                    $footer_about_desc   = $footer_about['footer_about_desc'];
+                                    $footer_about_fb_link   = $footer_about['footer_about_fb_link'];
+                                    $footer_about_tw_link   = $footer_about['footer_about_tw_link'];
+                                    $footer_about_ln_link   = $footer_about['footer_about_ln_link'];
+                                    $footer_about_ins_link   = $footer_about['footer_about_ins_link'];
+                                }
+                            ?>
+
+                            <h3>About Us</h3>
+                            <p><?php echo $footer_about_desc;?></p>
+                            <div class="social-icon d-flex align-items-center justify-content-center">
+                                <?php if( !empty($footer_about_fb_link) ) : ?>
+                                    <a href="<?php echo esc_url($footer_about_fb_link); ?>" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <?php endif; ?>
+                                <?php if( !empty($footer_about_tw_link) ) : ?>
+                                    <a href="<?php echo esc_url($footer_about_tw_link); ?>" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <?php endif; ?>
+                                <?php if( !empty($footer_about_ln_link) ) : ?>
+                                    <a href="<?php echo esc_url($footer_about_ln_link); ?>" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <?php endif; ?>
+                                <?php if( !empty($footer_about_ins_link) ) : ?>
+                                    <a href="<?php echo esc_url($footer_about_ins_link); ?>" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 ps-lg-5 wow fadeInUp wow" data-wow-delay=".4s">
-                        <div class="single-widget-items">
-                            <div class="widget-head">
-                                <h4>Quick Links</h4>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 ps-lg-5 wow fadeInUp wow" data-wow-delay=".4s">
+                    <div class="single-widget-items">
+                        <div class="widget-head">
+                            <h4>Quick Links</h4>
+                        </div>
+                        <?php
+                        wp_nav_menu( array(
+                            'theme_location' => 'footer-1',
+                            'menu_class'     => 'list-items',
+                            'container'      => false,
+                            'fallback_cb'    => false
+                        ) );
+                        ?>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 ps-lg-5 wow fadeInUp wow" data-wow-delay=".6s">
+                    <div class="single-widget-items">
+                        <div class="widget-head">
+                            <h4>Services</h4>
+                        </div>
+                        <?php
+                        wp_nav_menu( array(
+                            'theme_location' => 'footer-2',
+                            'menu_class'     => 'list-items',
+                            'container'      => false,
+                            'fallback_cb'    => false
+                        ) );
+                        ?>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 ps-xl-5 wow fadeInUp wow" data-wow-delay=".6s">
+                    <div class="single-widget-items">
+                        <div class="widget-head">
+                            <h4>Contact Us</h4>
+                        </div>
+                        <div class="contact-info">
+
+                            <?php 
+                                $footer_contact = get_field('footer_contact', 'option');
+
+                                if( $footer_contact ) {
+                                    $footer_phone   = $footer_contact['footer_phone'];
+                                    $footer_email   = $footer_contact['footer_email'];
+                                    $footer_address   = $footer_contact['footer_address'];
+                                }
+                            ?>
+
+                            <div class="contact-items">
+                                <div class="icon">
+                                    <i class="fa-regular fa-location-dot"></i>
+                                </div>
+                                <div class="content">
+                                    <?php if( !empty($footer_address) ) : ?>
+                                        <h6><?php echo esc_html($footer_address); ?></h6>
+                                    <?php endif; ?>
+                                </div>
                             </div>
-                           <?php
-wp_nav_menu( array(
-    'theme_location' => 'footer-1',     // registered location
-    'menu_class'     => 'list-items',  // class for <ul>
-    'container'      => false,          // remove <div>
-    'fallback_cb'    => false           // no fallback <page list>
-) );
-?>
+                            <div class="contact-items">
+                                <div class="icon">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </div>
+                                <div class="content">
+                                    <?php if( !empty($footer_email) ) : ?>
+                                        <h6><a href="mailto:<?php echo esc_attr($footer_email); ?>"><?php echo esc_html($footer_email); ?></a></h6>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <div class="contact-items">
+                                <div class="icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="content">
+                                    <h6>
+                                        <?php 
+                                        if( !empty($footer_phone) ) {
+                                            if( is_array($footer_phone) ) {
+                                                foreach( $footer_phone as $phone ) {
+                                                    echo '<a href="tel:' . esc_attr($phone) . '">' . esc_html($phone) . '</a><br>';
+                                                }
+                                            } else {
+                                                echo '<a href="tel:' . esc_attr($footer_phone) . '">' . esc_html($footer_phone) . '</a>';
+                                            }
+                                        }
+                                        ?>
+                                    </h6>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 ps-lg-5 wow fadeInUp wow" data-wow-delay=".6s">
-                        <div class="single-widget-items">
-                            <div class="widget-head">
-                                <h4>Services</h4>
-                            </div>
-                            <?php
-wp_nav_menu( array(
-    'theme_location' => 'footer-2',     // registered location
-    'menu_class'     => 'list-items',  // class for <ul>
-    'container'      => false,          // remove <div>
-    'fallback_cb'    => false           // no fallback <page list>
-) );
-?>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 ps-xl-5 wow fadeInUp wow" data-wow-delay=".6s">
-                        <div class="single-widget-items">
-                            <div class="widget-head">
-                                <h4>Contact Us</h4>
-                            </div>
-                            <div class="contact-info">
-                                <div class="contact-items">
-                                    <div class="icon">
-                                        <i class="fa-regular fa-location-dot"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h6>9550 Bolsa Ave #126, <br>
-                                            United States
-                                        </h6>
-                                    </div>
-                                </div>
-                                <div class="contact-items">
-                                    <div class="icon">
-                                        <i class="fa-regular fa-envelope"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h6>
-                                            <a href="mailto:info@touron.com">info@touron.com</a>
-                                        </h6>
-                                    </div>
-                                </div>
-                                <div class="contact-items">
-                                    <div class="icon">
-                                        <i class="fa-solid fa-phone"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h6>
-                                            <a href="tel:+256214203215">+256 214 203 215</a> <br>
-                                            <a href="tel:+10987654321">+1 098 765 4321</a>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="footer-wrapper">
-                    <p class="wow fadeInUp" data-wow-delay=".5s">
-                        Developed by <a href="https://infinityflamesoft.com/" target="_blank" rel="noopener">Infinity Flame Soft</a>.
-                    </p>
-                                                <?php
-wp_nav_menu( array(
-    'theme_location' => 'footer-3',     // registered location
-    'menu_class'     => 'bottom-list',  // class for <ul>
-    'container'      => false,          // remove <div>
-    'fallback_cb'    => false           // no fallback <page list>
-) );
-?>
                 </div>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <div class="footer-wrapper">
+                <p class="wow fadeInUp" data-wow-delay=".5s">
+                    Developed by <a href="https://infinityflamesoft.com/" target="_blank" rel="noopener">Infinity Flame Soft</a>.
+                </p>
+                <?php
+                wp_nav_menu( array(
+                    'theme_location' => 'footer-3',
+                    'menu_class'     => 'bottom-list',
+                    'container'      => false,
+                    'fallback_cb'    => false
+                ) );
+                ?>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <?php wp_footer(); ?>
 

@@ -57,7 +57,7 @@
                 {
                     "key": "field_68af783f83497",
                     "label": "Header Infos TW Link",
-                    "name": "header_infos_tw_link_",
+                    "name": "header_infos_tw_link",
                     "aria-label": "",
                     "type": "url",
                     "instructions": "",
@@ -500,5 +500,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1756330561
+    "modified": 1756332253
 }
