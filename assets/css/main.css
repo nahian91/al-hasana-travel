@@ -8747,3 +8747,49 @@ input.main-search-input::placeholder {
     display: none;
   }
 }/*# sourceMappingURL=main.css.map */
+
+.visa-services-section-title h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+.row.visa-services-row {
+  margin-bottom: 60px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 60px;
+}
+.row.visa-services-row:last-child{
+  margin-bottom: 0;
+  padding-bottom: 30px;
+}
+
+.activities-items.visa-services-box .activities-image {
+  border: 1px solid #ddd;
+}
+.activities-items.visa-services-box .activities-content {
+  margin-top: 10px;
+  padding: 10px;
+}
+.activities-items.visa-services-box .activities-content h4 {
+  font-size: 18px;
+}
+
+.visa-services-info h4 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.single-visa-service-info {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+.single-visa-service-info h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.single-visa-service-info p, .single-visa-service-info ul li{
+  color: #0A1F24;
+}
+.single-visa-service-info:last-child {
+  border-bottom: 0;
+  margin-bottom: 80px;
+}
