@@ -98,7 +98,7 @@ get_header();
     $categories = get_categories(array(
         'orderby'    => 'name',
         'order'      => 'ASC',
-        'hide_empty' => false, // show empty categories too (set true if you only want non-empty)
+        'hide_empty' => true
     ));
 
     foreach ($categories as $category) : ?>

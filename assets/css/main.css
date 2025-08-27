@@ -1500,8 +1500,10 @@ span {
   margin-bottom: 20px;
 }
 .contact-us-main .contact-box-items .content h3 {
-  font-weight: 600;
-  margin-bottom: 5px;
+	font-weight: 600;
+	margin-bottom: 5px;
+	font-size: 22px;
+	text-transform: inherit;
 }
 .contact-us-main .contact-box-items .content p {
   font-size: 18px;
@@ -8794,4 +8796,22 @@ input.main-search-input::placeholder {
 .single-visa-service-info:last-child {
   border-bottom: 0;
   margin-bottom: 80px;
+}
+.recent-thumb.visa-thumb img {
+  max-width: 60px;
+  height: 60px;
+}
+.news-widget-categories.visa-contact ul li {
+  display: flex !important;
+  justify-content: start !important;
+  gap: 15px;
+  color: #333 !important;
+  line-height: 28px !important;
+}
+.destination-card-items .destination-content .price h6 {
+	font-size: 22px;
+	font-weight: 700;
+}
+.price .theme-btn.style-2 {
+	padding: 15px 0;
 }
