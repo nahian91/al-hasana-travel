@@ -7182,7 +7182,9 @@ span {
   color: var(--theme);
 }
 .news-card-items-3 .news-content .link-btn {
-  color: var(--header);
+	color: var(--header);
+	display: block;
+	margin-top: 20px;
 }
 
 .news-section-2 .container-fluid {
