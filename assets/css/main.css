@@ -2713,7 +2713,9 @@ span {
   font-size: 12px;
 }
 .destination-card-items .destination-content h5 {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
+	font-size: 24px;
+	line-height: 36px;
 }
 .destination-card-items .destination-content h5 a:hover {
   color: var(--theme);
@@ -7327,6 +7329,9 @@ span {
   color: #FFB700;
   font-weight: 400;
 }
+.recent-content h6 {
+	line-height: 27px;
+}
 .main-sideber .single-sidebar-widget .tagcloud a {
   display: inline-block;
   padding: 15px 21px;
@@ -8797,7 +8802,7 @@ input.main-search-input::placeholder {
   border-bottom: 0;
   margin-bottom: 80px;
 }
-.recent-thumb.visa-thumb img {
+.recent-thumb.visa-thumb img, .recent-thumb img {
   max-width: 60px;
   height: 60px;
 }
@@ -8814,4 +8819,19 @@ input.main-search-input::placeholder {
 }
 .price .theme-btn.style-2 {
 	padding: 15px 0;
+}
+
+.activities-list li {
+  border-bottom: 1px solid #f4f4f4;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color: #333;
+}
+.activities-list li .fa-solid.fa-check {
+  color: green;
+  margin-right: 10px;
+}
+.activities-list li .fa-solid.fa-xmark {
+  color: red;
+  margin-right: 10px;
 }

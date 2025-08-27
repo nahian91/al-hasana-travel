@@ -224,7 +224,7 @@ function alhasana_register_cpts() {
         'labels'             => $tour_labels,
         'public'             => true,
         'menu_icon'          => 'dashicons-palmtree',
-        'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
+        'supports'           => array( 'title', 'thumbnail', 'custom-fields' ),
         'has_archive'        => true,
         'rewrite'            => array( 'slug' => 'tours' ),
         'show_in_rest'       => true,
