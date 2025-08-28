@@ -20,7 +20,7 @@ get_header();
                             <li>
                                 <a href="index.html">Home</a>
                             </li>
-                            <li><i class="fa-solid fa-chevrons-right"></i></li>
+                            <li><i class="fa-regular fa-chevrons-right"></i></li>
                             <li><?php echo single_cat_title();?></li>
                         </ul>
                     </div>

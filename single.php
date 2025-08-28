@@ -21,7 +21,7 @@ get_header();
                         <li>
                             <a href="index.html">Home</a>
                         </li>
-                        <li><i class="fa-solid fa-chevrons-right"></i></li>
+                        <li><i class="fa-regular fa-chevrons-right"></i></li>
                         <li><?php the_title();?></li>
                     </ul>
                 </div>
@@ -54,7 +54,7 @@ get_header();
     By <?php echo esc_html( get_the_author_meta('display_name', get_post_field('post_author', get_the_ID())) ); ?>
 </li>
                 <li>
-                    <i class="fa-solid fa-tag"></i>
+                    <i class="fa-regular fa-tag"></i>
                     <?php the_category(', '); ?>
                 </li>
             </ul>
@@ -143,7 +143,7 @@ get_header();
                 <div class="recent-content">
                     <ul>
                         <li>
-                            <i class="fa-solid fa-calendar-days"></i>
+                            <i class="fa-regular fa-calendar-days"></i>
                             <?php echo get_the_date('d M, Y'); ?>
                         </li>
                     </ul>

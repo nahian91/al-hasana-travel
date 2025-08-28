@@ -9,7 +9,7 @@
                 <h2><?php the_title(); ?></h2>
                 <ul class="breadcrumb-list">
                     <li><a href="<?php echo home_url(); ?>">Home</a></li>
-                    <li><i class="fa-solid fa-chevrons-right"></i></li>
+                    <li><i class="fa-regular fa-chevrons-right"></i></li>
                     <li><?php the_title(); ?></li>
                 </ul>
             </div>
@@ -82,7 +82,7 @@ $tour_remarks_list    = get_field('remarks_list');
                             <div class="activities-box-area">
                                 <?php if ($accommodation) : ?>
                                 <div class="activities-box-item">
-                                    <div class="icon"><i class="fa-solid fa-hotel"></i></div>
+                                    <div class="icon"><i class="fa-regular fa-hotel"></i></div>
                                     <div class="content">
                                         <span>Accommodation</span>
                                         <h6><?php echo esc_html($accommodation); ?></h6>
@@ -91,7 +91,7 @@ $tour_remarks_list    = get_field('remarks_list');
                                 <?php endif; ?>
                                 <?php if ($transportation) : ?>
                                 <div class="activities-box-item style-2">
-                                    <div class="icon"><i class="fa-solid fa-bus"></i></div>
+                                    <div class="icon"><i class="fa-regular fa-bus"></i></div>
                                     <div class="content">
                                         <span>Transportation</span>
                                         <h6><?php echo esc_html($transportation); ?></h6>
@@ -100,7 +100,7 @@ $tour_remarks_list    = get_field('remarks_list');
                                 <?php endif; ?>
                                 <?php if ($departure_from) : ?>
                                 <div class="activities-box-item">
-                                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                                    <div class="icon"><i class="fa-regular fa-location-dot"></i></div>
                                     <div class="content">
                                         <span>Departure From</span>
                                         <h6><?php echo esc_html($departure_from); ?></h6>
@@ -109,7 +109,7 @@ $tour_remarks_list    = get_field('remarks_list');
                                 <?php endif; ?>
                                 <?php if ($tour_language) : ?>
                                 <div class="activities-box-item">
-                                    <div class="icon"><i class="fa-solid fa-language"></i></div>
+                                    <div class="icon"><i class="fa-regular fa-language"></i></div>
                                     <div class="content">
                                         <span>Tour Language</span>
                                         <h6><?php echo esc_html($tour_language); ?></h6>
@@ -121,7 +121,7 @@ $tour_remarks_list    = get_field('remarks_list');
                             <div class="activities-box-area mb-0">
                                 <?php if ($fitness_level) : ?>
                                 <div class="activities-box-item">
-                                    <div class="icon"><i class="fa-solid fa-shuttle-space"></i></div>
+                                    <div class="icon"><i class="fa-regular fa-shuttle-space"></i></div>
                                     <div class="content">
                                         <span>Fitness Level</span>
                                         <h6><?php echo esc_html($fitness_level); ?></h6>
@@ -130,7 +130,7 @@ $tour_remarks_list    = get_field('remarks_list');
                                 <?php endif; ?>
                                 <?php if ($meals) : ?>
                                 <div class="activities-box-item">
-                                    <div class="icon"><i class="fa-solid fa-utensils"></i></div>
+                                    <div class="icon"><i class="fa-regular fa-utensils"></i></div>
                                     <div class="content">
                                         <span>Meals</span>
                                         <h6><?php echo esc_html($meals); ?></h6>
@@ -139,7 +139,7 @@ $tour_remarks_list    = get_field('remarks_list');
                                 <?php endif; ?>
                                 <?php if ($minimum_age) : ?>
                                 <div class="activities-box-item">
-                                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                                    <div class="icon"><i class="fa-regular fa-user"></i></div>
                                     <div class="content">
                                         <span>Minimum Age</span>
                                         <h6><?php echo esc_html($minimum_age); ?></h6>
@@ -148,7 +148,7 @@ $tour_remarks_list    = get_field('remarks_list');
                                 <?php endif; ?>
                                 <?php if ($maximum_age) : ?>
                                 <div class="activities-box-item">
-                                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                                    <div class="icon"><i class="fa-regular fa-user"></i></div>
                                     <div class="content">
                                         <span>Maximum Age</span>
                                         <h6><?php echo esc_html($maximum_age); ?></h6>
@@ -165,7 +165,7 @@ $tour_remarks_list    = get_field('remarks_list');
                             <h3>Package Includes</h3>
                             <ul class="activities-list">
                                 <?php foreach ($tour_cost_includes as $item) : ?>
-                                    <li><i class="fa-solid fa-check"></i> <?php echo esc_html($item['cost_includes_list'] ?? ''); ?></li>
+                                    <li><i class="fa-regular fa-check"></i> <?php echo esc_html($item['cost_includes_list'] ?? ''); ?></li>
                                 <?php endforeach; ?>
                             </ul>
                         </div>
@@ -177,7 +177,7 @@ $tour_remarks_list    = get_field('remarks_list');
                             <h3>Package Excludes</h3>
                             <ul class="activities-list">
                                 <?php foreach ($tour_cost_excludes as $item) : ?>
-                                    <li><i class="fa-solid fa-xmark"></i><?php echo esc_html($item['cost_excludes_list'] ?? ''); ?></li>
+                                    <li><i class="fa-regular fa-xmark"></i><?php echo esc_html($item['cost_excludes_list'] ?? ''); ?></li>
                                 <?php endforeach; ?>
                             </ul>
                         </div>
@@ -243,7 +243,7 @@ $tour_remarks_list    = get_field('remarks_list');
                                 ?>
                                 <ul>
                                     <?php if (!empty($contact_phone)) : ?>
-                                        <li><i class="fa-solid fa-phone"></i> <?php echo esc_html($contact_phone); ?></li>
+                                        <li><i class="fa-regular fa-phone"></i> <?php echo esc_html($contact_phone); ?></li>
                                     <?php endif; ?>
 
                                     <?php if (!empty($contact_email)) : ?>
@@ -251,7 +251,7 @@ $tour_remarks_list    = get_field('remarks_list');
                                     <?php endif; ?>
 
                                     <?php if (!empty($contact_address)) : ?>
-                                        <li><i class="fa-solid fa-location-dot"></i> <?php echo esc_html($contact_address); ?></li>
+                                        <li><i class="fa-regular fa-location-dot"></i> <?php echo esc_html($contact_address); ?></li>
                                     <?php endif; ?>
                                 </ul>
                             </div>

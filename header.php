@@ -89,7 +89,7 @@
 
                     <?php if( $phone ) : ?>
                         <li>
-                            <i class="fa-solid fa-phone"></i>
+                            <i class="fa-regular fa-phone"></i>
                             <a href="tel:<?php echo esc_attr($phone); ?>"><?php echo esc_html($phone); ?></a>
                         </li>
                     <?php endif; ?>

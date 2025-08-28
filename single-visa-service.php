@@ -11,7 +11,7 @@
                         <li>
                             <a href="index.html">Home</a>
                         </li>
-                        <li><i class="fa-solid fa-chevrons-right"></i></li>
+                        <li><i class="fa-regular fa-chevrons-right"></i></li>
                         <li><?php the_title();?></li>
                     </ul>
                 </div>
@@ -35,9 +35,9 @@
                                 </div>
                                 <div class="news-widget-categories visa-contact">
                                     <ul>
-                                        <li><i class="fa-solid fa-phone"></i> +88-01945111444</li>
+                                        <li><i class="fa-regular fa-phone"></i> +88-01945111444</li>
                                         <li><i class="fa-regular fa-envelope"></i>visa@obokash.com</li>
-                                        <li><i class="fa-solid fa-location-dot"></i>Tower A (5th Floor/South House), # 13, Bir Uttam Aminul Haque Sarak, Kemal Ataturk Ave, Dhaka 1213</li>  
+                                        <li><i class="fa-regular fa-location-dot"></i>Tower A (5th Floor/South House), # 13, Bir Uttam Aminul Haque Sarak, Kemal Ataturk Ave, Dhaka 1213</li>  
                                     </ul>
                                 </div>
                             </div>
@@ -104,7 +104,7 @@
                                         <div class="recent-content">
                                             <ul>
                                                 <li>
-                                                    <i class="fa-solid fa-calendar-days"></i>
+                                                    <i class="fa-regular fa-calendar-days"></i>
                                                     14 Feb, 2024
                                                 </li>
                                             </ul>
@@ -123,7 +123,7 @@
                                         <div class="recent-content">
                                             <ul>
                                                 <li>
-                                                    <i class="fa-solid fa-calendar-days"></i>
+                                                    <i class="fa-regular fa-calendar-days"></i>
                                                     12 Mar, 2024
                                                 </li>
                                             </ul>
@@ -142,7 +142,7 @@
                                         <div class="recent-content">
                                             <ul>
                                                 <li>
-                                                    <i class="fa-solid fa-calendar-days"></i>
+                                                    <i class="fa-regular fa-calendar-days"></i>
                                                     23 Feb, 2024
                                                 </li>
                                             </ul>
@@ -168,7 +168,7 @@
                                         <div class="recent-content">
                                             <ul>
                                                 <li>
-                                                    <i class="fa-solid fa-calendar-days"></i>
+                                                    <i class="fa-regular fa-calendar-days"></i>
                                                     14 Feb, 2024
                                                 </li>
                                             </ul>
@@ -187,7 +187,7 @@
                                         <div class="recent-content">
                                             <ul>
                                                 <li>
-                                                    <i class="fa-solid fa-calendar-days"></i>
+                                                    <i class="fa-regular fa-calendar-days"></i>
                                                     12 Mar, 2024
                                                 </li>
                                             </ul>
@@ -206,7 +206,7 @@
                                         <div class="recent-content">
                                             <ul>
                                                 <li>
-                                                    <i class="fa-solid fa-calendar-days"></i>
+                                                    <i class="fa-regular fa-calendar-days"></i>
                                                     23 Feb, 2024
                                                 </li>
                                             </ul>
@@ -232,7 +232,7 @@
                                         <div class="recent-content">
                                             <ul>
                                                 <li>
-                                                    <i class="fa-solid fa-calendar-days"></i>
+                                                    <i class="fa-regular fa-calendar-days"></i>
                                                     14 Feb, 2024
                                                 </li>
                                             </ul>
@@ -251,7 +251,7 @@
                                         <div class="recent-content">
                                             <ul>
                                                 <li>
-                                                    <i class="fa-solid fa-calendar-days"></i>
+                                                    <i class="fa-regular fa-calendar-days"></i>
                                                     12 Mar, 2024
                                                 </li>
                                             </ul>
@@ -270,7 +270,7 @@
                                         <div class="recent-content">
                                             <ul>
                                                 <li>
-                                                    <i class="fa-solid fa-calendar-days"></i>
+                                                    <i class="fa-regular fa-calendar-days"></i>
                                                     23 Feb, 2024
                                                 </li>
                                             </ul>

@@ -14,7 +14,7 @@ get_header();
                 <h2><?php the_title(); ?></h2>
                 <ul class="breadcrumb-list">
                     <li><a href="<?php echo esc_url(home_url('/')); ?>">Home</a></li>
-                    <li><i class="fa-solid fa-chevrons-right"></i></li>
+                    <li><i class="fa-regular fa-chevrons-right"></i></li>
                     <li><?php the_title(); ?></li>
                 </ul>
             </div>
@@ -59,7 +59,7 @@ get_header();
                                 <div class="destination-content">
                                     <ul class="meta">
                                         <li>
-                                            <i class="fa-solid fa-location-dot"></i>
+                                            <i class="fa-regular fa-location-dot"></i>
                                             <?php echo esc_html($tour_location); ?>
                                         </li>
                                     </ul>
@@ -74,14 +74,14 @@ get_header();
                                             <?php echo esc_html($tour_days); ?>
                                         </li>
                                         <li>
-                                            <i class="fa-solid fa-users"></i>
+                                            <i class="fa-regular fa-users"></i>
                                             <?php echo esc_html($tour_peoples); ?>
                                         </li>
                                     </ul>
                                     <div class="price">
                                         <h6>৳<?php echo esc_html($tour_price); ?></h6>
                                         <a href="<?php the_permalink(); ?>" class="theme-btn style-2">
-                                            View Details <i class="fa-solid fa-arrow-right"></i>
+                                            View Details <i class="fa-regular fa-arrow-right"></i>
                                         </a>
                                     </div>
                                 </div>

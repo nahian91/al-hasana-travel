@@ -123,7 +123,7 @@
                             </div>
                             <div class="contact-items">
                                 <div class="icon">
-                                    <i class="fa-solid fa-phone"></i>
+                                    <i class="fa-regular fa-phone"></i>
                                 </div>
                                 <div class="content">
                                     <h6>
