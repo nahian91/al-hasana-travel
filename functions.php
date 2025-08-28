@@ -322,3 +322,12 @@ add_filter('acf/settings/load_json', function( $paths ) {
     $paths[] = get_stylesheet_directory() . '/acf-json';
     return $paths;
 });
+
+/**
+ * Allow SVG mime type
+ */
+add_filter( 'upload_mimes', function( $mimes ) {
+    $mimes['svg']  = 'image/svg+xml';
+    $mimes['svgz'] = 'image/svg+xml';
+    return $mimes;
+} );
