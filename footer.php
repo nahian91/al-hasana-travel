@@ -150,7 +150,7 @@
         <div class="footer-bottom">
             <div class="footer-wrapper">
                 <p class="wow fadeInUp" data-wow-delay=".5s">
-                    Developed by <a href="https://infinityflamesoft.com/" target="_blank" rel="noopener">Infinity Flame Soft</a>.
+                    Design & Developed by <a href="https://infinityflamesoft.com/" target="_blank" rel="noopener">Infinity Flame Soft</a>.
                 </p>
                 <?php
                 wp_nav_menu( array(
