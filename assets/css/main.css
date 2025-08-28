@@ -1939,12 +1939,11 @@ span {
     display: none;
   }
 }
-
 .cta-box-items {
-  padding: 30px;
-  border-radius: 20px;
-  background: #017DB9;
-  position: relative;
+	padding: 30px 30px 220px;
+	border-radius: 20px;
+	background: #017DB9;
+	position: relative;
 }
 .cta-box-items .cta-content {
   position: relative;
@@ -1976,9 +1975,10 @@ span {
   width: 100%;
 }
 .cta-box-items .cta-image {
-  position: absolute;
-  bottom: 14px;
-  right: 40px;
+	position: absolute;
+	bottom: 14px;
+	right: 40px;
+	top: 90px;
 }
 @media (max-width: 1199px) {
   .cta-box-items .cta-image {
@@ -6441,10 +6441,8 @@ span {
   margin: 20px 20px;
   background-position: top !important;
 }
-@media (max-width: 1600px) {
-  .hero-2 {
-    padding: 400px 30px 120px;
-  }
+.hero-2 {
+	padding: 180px 30px 180px;
 }
 @media (max-width: 1399px) {
   .hero-2 {
@@ -6491,6 +6489,7 @@ span {
   margin-right: 20px;
   border-radius: 20px;
   padding: 60px 30px;
+  background-color: var(--white);
 }
 @media (max-width: 1199px) {
   .best-price-section {
@@ -8486,6 +8485,7 @@ input.main-search-input::placeholder {
   border-radius: 12px;
   border: 1px solid #ebebeb !important;
   margin-top: 30px;
+  background-color: var(--white);
 }
 .testimonial-wrapper .testimonial-card-items .star {
   display: inline-block;
@@ -8847,4 +8847,19 @@ input.main-search-input::placeholder {
 .trou-more-btn {
 	text-align: center;
 	margin-top: 60px;
+}
+.menu-item-has-children {
+    position: relative;
+}
+.menu-item-has-children::after {
+	content: "\f078";
+	font-family: "Font Awesome 6 Pro";
+	font-weight: 900;
+	position: absolute;
+	right: -15px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #333;
+	pointer-events: none;
+	font-size: 12px;
 }
