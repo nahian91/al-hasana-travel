@@ -7941,8 +7941,7 @@ input.main-search-input::placeholder {
 .section-title {
   position: relative;
   z-index: 99;
-  margin-bottom: 30px;
-  margin-top: -6px;
+  margin-bottom: 80px;
 }
 .section-title .sub-title {
   font-size: 18px;
@@ -8844,4 +8843,8 @@ input.main-search-input::placeholder {
 .activities-list li .fa-solid.fa-xmark {
   color: red;
   margin-right: 10px;
+}
+.trou-more-btn {
+	text-align: center;
+	margin-top: 60px;
 }
