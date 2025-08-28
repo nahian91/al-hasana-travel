@@ -5000,12 +5000,18 @@ span {
   background-color: var(--theme);
 }
 .footer-widget-wrapper-new .single-widget-items .contact-info .contact-items .icon i {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+}
+.footer-widget-wrapper-new .single-widget-items .contact-info .contact-items .icon i {
   font-size: 18px;
   color: var(--white);
 }
 .footer-widget-wrapper-new .single-widget-items .contact-info .contact-items .content h6 {
   font-weight: 400;
   color: var(--white);
+  line-height: 27px;
 }
 .footer-widget-wrapper-new .single-widget-items .contact-info .contact-items .content h6 a {
   color: var(--white);
