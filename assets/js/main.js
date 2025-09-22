@@ -6,6 +6,19 @@
 
   $documentOn.ready(function () {
 
+     //>> Mobile Menu Js Start <<//
+      $('#mobile-menu').meanmenu({
+        meanMenuContainer: '.mobile-menu',
+        meanScreenWidth: "1199",
+        meanExpand: ['<i class="far fa-plus"></i>'],
+    });
+
+    $('#mobile-menus').meanmenu({
+        meanMenuContainer: '.mobile-menus',
+        meanScreenWidth: "1920",
+        meanExpand: ['<i class="far fa-plus"></i>'],
+    });
+
     //>> Sidebar Toggle
     $(".offcanvas__close, .offcanvas__overlay").on("click", function () {
       $(".offcanvas__info").removeClass("info-open");

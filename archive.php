@@ -18,7 +18,7 @@ get_header();
                         <h2><?php echo single_cat_title();?></h2>
                         <ul class="breadcrumb-list">
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="<?php echo site_url();?>">Home</a>
                             </li>
                             <li><i class="fa-regular fa-chevrons-right"></i></li>
                             <li><?php echo single_cat_title();?></li>

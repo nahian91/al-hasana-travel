@@ -7,14 +7,14 @@ get_header();
 ?>
         
         <!-- breadcrumb-wrappe-Section Start -->
-        <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(<?php echo get_template_directory_uri();?>/assets/img/breadcrumb/breadcrumb.jpg);">
+        <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(<?php echo get_template_directory_uri();?>/assets/img/breadcrumb/breadcrumb-6.jpg);">
             <div class="container">
                 <div class="row">
                     <div class="page-heading">
                         <h2><?php the_title();?></h2>
                         <ul class="breadcrumb-list">
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="<?php echo site_url();?>">Home</a>
                             </li>
                             <li><i class="fa-regular fa-chevrons-right"></i></li>
                             <li><?php the_title();?></li>
