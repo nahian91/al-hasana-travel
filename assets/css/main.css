@@ -6,7 +6,7 @@
   --black: #000;
   --white: #fff;
   --theme: #2c3593;
-  --theme-2: #113D48;
+  --theme-2: #2b3692;
   --header: #0A1F24;
   --text: #687179;
   --border: #E1E4E5;
@@ -479,6 +479,11 @@ span {
   border-radius: 10px;
   border: 1px solid var(--border);
   padding: 28px 30px;
+}
+.contact-us-main .contact-box-items p {
+  margin-top: 15px;
+	margin-bottom: 15px;
+  color: #333 !important;
 }
 .contact-us-main .contact-box-items .icon {
   margin-bottom: 20px;
