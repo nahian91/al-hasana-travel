@@ -513,10 +513,10 @@ span {
   color: var(--white);
 }
 .contact-us-main:hover .contact-box-items .content h3 a {
-  color: var(--white);
+  color: var(--white) !important;
 }
 .contact-us-main:hover .contact-box-items .content p {
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 .contact-us-wrapper .contact-us-contact {
