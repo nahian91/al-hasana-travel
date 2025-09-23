@@ -4707,3 +4707,15 @@ input.main-search-input::placeholder {
 .comment-form-wrap.gtamca-form button a {
   color: #fff;
 }
+
+.slicknav_menu {
+	display: none;
+}
+@media only screen and (max-width: 767px) {
+  .slicknav_menu {
+    display: block;
+  }
+  #mobile-menu {
+	display: none;
+}
+}

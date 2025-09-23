@@ -6,28 +6,7 @@
 
   $documentOn.ready(function () {
 
-     //>> Mobile Menu Js Start <<//
-      $('#mobile-menu').meanmenu({
-        meanMenuContainer: '.mobile-menu',
-        meanScreenWidth: "1199",
-        meanExpand: ['<i class="far fa-plus"></i>'],
-    });
-
-    $('#mobile-menus').meanmenu({
-        meanMenuContainer: '.mobile-menus',
-        meanScreenWidth: "1920",
-        meanExpand: ['<i class="far fa-plus"></i>'],
-    });
-
-    //>> Sidebar Toggle
-    $(".offcanvas__close, .offcanvas__overlay").on("click", function () {
-      $(".offcanvas__info").removeClass("info-open");
-      $(".offcanvas__overlay").removeClass("overlay-open");
-    });
-    $(".sidebar__toggle").on("click", function () {
-      $(".offcanvas__info").addClass("info-open");
-      $(".offcanvas__overlay").addClass("overlay-open");
-    });
+    $('#menu-menu-1').slicknav();
 
     //>> Body Overlay
     $(".body-overlay").on("click", function () {
@@ -64,10 +43,6 @@
       new WOW().init();
     }
 
-    //>> Nice Select
-    if ($('.single-select').length) {
-      $('.single-select').niceSelect();
-    }
 
     //>> Testimonial Slider
     if ($('.testimonial-slider').length) {

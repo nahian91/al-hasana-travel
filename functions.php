@@ -145,6 +145,7 @@ function alhasanatheme_scripts() {
 	wp_enqueue_style('alhasanatheme-bootstrap',get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), _S_VERSION);
 	wp_enqueue_style('alhasanatheme-all',get_template_directory_uri() . '/assets/css/all.min.css', array(), _S_VERSION);
 	wp_enqueue_style('alhasanatheme-animate',get_template_directory_uri() . '/assets/css/animate.css', array(), _S_VERSION);
+	wp_enqueue_style('alhasanatheme-slick',get_template_directory_uri() . '/assets/css/slicknav.min.css', array(), _S_VERSION);
 	wp_enqueue_style('alhasanatheme-magnific-popup',get_template_directory_uri() . '/assets/css/magnific-popup.css', array(), _S_VERSION);
 	wp_enqueue_style('alhasanatheme-meanmenu',get_template_directory_uri() . '/assets/css/meanmenu.css', array(), _S_VERSION);
 	wp_enqueue_style('alhasanatheme-datepickerboot',get_template_directory_uri() . '/assets/css/datepickerboot.css', array(), _S_VERSION);
@@ -156,10 +157,10 @@ function alhasanatheme_scripts() {
 	wp_enqueue_script( 'alhasanatheme-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'alhasanatheme-nice-select', get_template_directory_uri() . '/assets/js/jquery.nice-select.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'alhasanatheme-waypoints', get_template_directory_uri() . '/assets/js/jquery.waypoints.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'alhasanatheme-slicknav', get_template_directory_uri() . '/assets/js/jquery.slicknav.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'alhasanatheme-counterup', get_template_directory_uri() . '/assets/js/jquery.counterup.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'alhasanatheme-swiper-bundle', get_template_directory_uri() . '/assets/js/swiper-bundle.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'alhasanatheme-meanmenu', get_template_directory_uri() . '/assets/js/jquery.meanmenu.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'alhasanatheme-bootstrap-datepicker', get_template_directory_uri() . '/assets/js/bootstrap-datepicker.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'alhasanatheme-magnific-popup', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'alhasanatheme-wow', get_template_directory_uri() . '/assets/js/wow.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'alhasanatheme-main', get_template_directory_uri() . '/assets/js/main.js', array(), _S_VERSION, true );
